@@ -29,7 +29,7 @@ namespace API
             services.AddControllers();
 
             services.AddDbContext<EcommerceContext>(x =>
-                x.UseSqlServer(_config.GetConnectionString("DefaultConnection")));
+                x.UseSqlServer(_config.GetConnectionString("DefaultConnectionSql")));
             services.AddDbContext<AppIdentityDbContext>(x =>
                 x.UseSqlServer(_config.GetConnectionString("IdentityConnection")));
 
